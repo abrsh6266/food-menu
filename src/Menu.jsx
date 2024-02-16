@@ -1,15 +1,14 @@
-import React from 'react'
+import React from "react";
+import MenuItem from "./MenuItem";
 
-const Menu = ({foods}) => {
+const Menu = ({ foods }) => {
   return (
-    <div>
-        {
-            foods.map(f=>{
-                
-            })
-        }
+    <div className="section-center">
+      {foods.map((f) => {
+        return <MenuItem key={f.id} {...f} />;
+      })}
     </div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;
